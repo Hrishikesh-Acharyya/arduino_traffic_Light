@@ -1,28 +1,33 @@
 // C++ code
-//
+int greenLED = 8;
+int greenDelay = 2000;
+int yellowLED = 11;
+int yellowDelay = 4000;
+int redLED = 12;
+int redDelay = 5000;
 void setup()
 {
-  pinMode(12, OUTPUT); //Red LED
-  pinMode(11,OUTPUT);// yellow LED
-  pinMode(8,OUTPUT);// GREEN LED
+  pinMode(redLED, OUTPUT); //Red LED
+  pinMode(yellowLED,OUTPUT);// yellow LED
+  pinMode(greenLED,OUTPUT);// GREEN LED
 }
 
 void loop()
 {
 
   // red light 5 seconds
-  digitalWrite(12, HIGH);
-  delay(5000); // Wait for 1000 millisecond(s)
-  digitalWrite(12, LOW);
+  digitalWrite(redLED, HIGH);
+  delay(redDelay); // Wait for 1000 millisecond(s)
+  digitalWrite(redLED, LOW);
 
   // green light 2 seconds
-  digitalWrite(8,HIGH);
-  delay(2000);
-  digitalWrite(8,LOW);
+  digitalWrite(greenLED,HIGH);
+  delay(greenDelay);
+  digitalWrite(greenLED,LOW);
   
   // yellow light 4 seconds 
-  digitalWrite(11,HIGH);
-  delay(4000);
-  digitalWrite(11,LOW);
+  digitalWrite(yellowLED,HIGH);
+  delay(yellowDelay);
+  digitalWrite(yellowLED,LOW);
  
 }
